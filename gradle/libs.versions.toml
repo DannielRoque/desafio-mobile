@@ -11,6 +11,9 @@ composeBom = "2026.02.01"
 retrofitVersion = "2.9.0"
 okHttpVersion = "4.12.0"
 koinVersion = "3.5.0"
+mockkVersion = "1.13.5"
+coroutinesTest = "1.7.3"
+appCrashVersion = "1.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -33,6 +36,10 @@ squareup-converter = { group = "com.squareup.retrofit2", name = "converter-gson"
 squareup-okhttp3 = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okHttpVersion" }
 
 koin-androidx = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koinVersion" }
+
+io-mockk = { group = "io.mockk", name = "mockk", version.ref = "mockkVersion"}
+coroutines-test = {group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesTest"}
+app-cash-turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "appCrashVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
