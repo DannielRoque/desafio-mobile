@@ -7,7 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.roque.meuingresso.ui.navigation.NavGraph
+import com.roque.meuingresso.ui.features.main.MainScreen // Importe a nova casca
 import com.roque.meuingresso.ui.theme.MeuIngressoTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize()
                 ) {
-                    NavGraph()
+                    MainScreen()
                 }
             }
         }

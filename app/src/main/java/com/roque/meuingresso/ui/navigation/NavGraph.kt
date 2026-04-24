@@ -1,6 +1,7 @@
 package com.roque.meuingresso.ui.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -17,7 +18,9 @@ sealed class Screen(val route: String) {
 }
 
 @Composable
-fun NavGraph() {
+fun NavGraph(
+    navController: NavHostController
+) {
     val navController = rememberNavController()
 
     NavHost(
