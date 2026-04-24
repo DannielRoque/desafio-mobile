@@ -49,6 +49,7 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
     implementation(libs.coil.compose)
+    implementation(libs.androidx.navigation)
     implementation(libs.squareup.retrofit)
     implementation(libs.squareup.converter)
     implementation(libs.squareup.okhttp3)
