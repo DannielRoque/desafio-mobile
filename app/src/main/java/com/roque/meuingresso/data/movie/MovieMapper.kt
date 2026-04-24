@@ -8,6 +8,7 @@ fun MovieDto.toDomain() = Movie(
     title = title,
     synopsis = synopsis,
     thumbUrl = images.find { it.type == "PosterPortrait" }?.url ?: imageFeatured,
+    imageFeatured = this.images.find { it.type == "PosterHorizontal" }?.url ?: "",
     bannerUrl = images.find { it.type == "PosterHorizontal" }?.url ?: imageFeatured,
     genres = genres
 )
