@@ -47,6 +47,7 @@ koin-androidx = { group = "io.insert-koin", name = "koin-androidx-compose", vers
 io-mockk = { group = "io.mockk", name = "mockk", version.ref = "mockkVersion"}
 coroutines-test = {group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesTest"}
 app-cash-turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "appCrashVersion" }
+navigation-testing  = { group = "androidx.navigation", name = "navigation-testing", version.ref = "navigationVersion"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -5,7 +5,6 @@ import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.roque.meuingresso.ui.features.details.MovieDetailsScreen
 import com.roque.meuingresso.ui.features.movielist.MovieListScreen
@@ -21,7 +20,6 @@ sealed class Screen(val route: String) {
 fun NavGraph(
     navController: NavHostController
 ) {
-    val navController = rememberNavController()
 
     NavHost(
         navController = navController,
