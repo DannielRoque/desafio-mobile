@@ -16,7 +16,7 @@ class MovieListContract {
     sealed class Intent : UiIntent {
         object LoadMovies : Intent()
         object Refresh : Intent()
-        data class OnMovieClicked(val movie: Movie) : Intent()
+        data class OnMovieClicked(val movieId: String) : Intent()
     }
 
     sealed class Effect : UiEffect {
