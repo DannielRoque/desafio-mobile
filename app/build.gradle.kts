@@ -51,6 +51,7 @@ dependencies {
     implementation(libs.squareup.retrofit)
     implementation(libs.squareup.converter)
     implementation(libs.squareup.okhttp3)
+    implementation(libs.koin.androidx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
