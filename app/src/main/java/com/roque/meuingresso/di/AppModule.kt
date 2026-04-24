@@ -3,6 +3,7 @@ package com.roque.meuingresso.di
 import com.roque.meuingresso.data.repository.MovieRepositoryImpl
 import com.roque.meuingresso.data.source.remote.IngressoApiService
 import com.roque.meuingresso.domain.repository.MovieRepository
+import com.roque.meuingresso.ui.features.details.MovieDetailsViewModel
 import com.roque.meuingresso.ui.features.movielist.MovieListViewModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -41,4 +42,5 @@ val repositoryModule = module {
 
 val viewModelModule = module {
     viewModel { MovieListViewModel(repository = get()) }
+    viewModel { MovieDetailsViewModel(repository = get()) }
 }
