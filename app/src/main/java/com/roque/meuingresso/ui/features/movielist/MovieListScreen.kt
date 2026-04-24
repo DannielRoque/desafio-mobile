@@ -18,6 +18,7 @@ import org.koin.androidx.compose.koinViewModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MovieListScreen(
+    onMovieClick: (String) -> Unit,
     viewModel: MovieListViewModel = koinViewModel()
 ) {
 
@@ -27,14 +28,21 @@ fun MovieListScreen(
         viewModel.handleIntent(MovieListContract.Intent.LoadMovies)
     }
 
+    MovieListContent(
+        state = state,
+        onMovieClick = { id ->
+            viewModel.handleIntent(MovieListContract.Intent.OnMovieClicked(id))
+        }
+    )
+
     LaunchedEffect(Unit) {
         viewModel.effect.collect { effect ->
             when (effect) {
                 is MovieListContract.Effect.NavigateToDetails -> {
-                    TODO("Evento de clique para detalhes")
+                    onMovieClick(effect.movieId)
                 }
                 is MovieListContract.Effect.ShowError -> {
-                    TODO("Em caso de erro apresentar snackbar")
+                    //TODO("Em caso de erro apresentar snackbar")
                 }
             }
         }

@@ -10,13 +10,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.roque.meuingresso.domain.model.Movie
 import com.roque.meuingresso.ui.features.movielist.MovieListContract
 
 @Composable
 fun MovieListContent(
     state: MovieListContract.State,
-    onMovieClick: (Movie) -> Unit,
+    onMovieClick: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     Box(
@@ -45,7 +46,7 @@ fun MovieListContent(
                     ) { movie ->
                         MovieItem(
                             movie = movie,
-                            onClick = { onMovieClick(movie) }
+                            onClick = { onMovieClick(movie.id) }
                         )
                     }
                 }

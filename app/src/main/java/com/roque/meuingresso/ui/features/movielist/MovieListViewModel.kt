@@ -17,7 +17,7 @@ class MovieListViewModel(
             is MovieListContract.Intent.LoadMovies -> fetchMovies()
             is MovieListContract.Intent.Refresh -> fetchMovies()
             is MovieListContract.Intent.OnMovieClicked -> {
-                setEffect(MovieListContract.Effect.NavigateToDetails(intent.movie.id))
+                setEffect(MovieListContract.Effect.NavigateToDetails(intent.movieId))
             }
         }
     }
